@@ -1,0 +1,9 @@
+# Project: allergy
+[deploy]
+url = https://dash.scrapinghub.com/api/scrapyd/
+username = <scrapinghub username>
+password = <scrapinghub password>
+project = <scrapinghub project id>
+
+[settings]
+#default = myproject.settings
