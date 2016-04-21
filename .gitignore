@@ -9,6 +9,8 @@ __pycache__/
 # Config Files
 *.cfg
 settings.py
+scrapinghub.yml
+setup.py
 
 # Distribution / packaging
 .Python

@@ -1,9 +1,10 @@
 import scrapy
-from scrapy.selector import Selector
 import requests
 import settings
 import pprint
 import jsonpickle
+from scrapy.selector import Selector
+
 
 class Allergen:
 
@@ -19,7 +20,6 @@ class Allergen:
     allergen_type = None
     allergen_status = None
     allergen_sum = None
-
     allergen_details = None
 
     def __repr__(self):
