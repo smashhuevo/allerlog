@@ -45,10 +45,16 @@ class AllerSpider(scrapy.Spider):
 
     def parse(self, response):
 
-        report_date = response.selector.xpath('//table[@class="MsoNormalTable"]/tbody/tr/td/p/text()').extract_first()
+        report_date = response.selector.xpath('//table[@class="MsoNormalTable"]/tbody/tr/td/p/strong/text()').extract_first()
         print report_date
 
         main_table = response.selector.xpath('//table[@class="MsoNormalTable"]/tbody/tr/td/div/table/tbody/tr/td/div/text()').extract()
+
+        print "-----"
+
+        print main_table
+
+        print "-----"
 
         allergens = {'tree': Allergen(report_date, main_table[3], main_table[4], main_table[5]),
                      'weed': Allergen(report_date, main_table[6], main_table[7], main_table[8]),
